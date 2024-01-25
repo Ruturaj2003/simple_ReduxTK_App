@@ -7,10 +7,7 @@ const CartContainer = () => {
   const { cartItems, total, amount } = useSelector((state) => {
     return state.cart;
   });
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(calculateTotals());
-  }, [cartItems]);
+
   if (amount < 1) {
     return (
       <section>
